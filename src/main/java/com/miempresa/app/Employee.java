@@ -19,7 +19,7 @@ public class Employee {
 
 	@Override
 	public String toString() {
-		return "Employee [años=" + años + ", nombre=" + nombre + "]";
+		return "Empleado: " + this.nombre + ", Años en la empresa: " + this.años ;
 	}
 	
 }
