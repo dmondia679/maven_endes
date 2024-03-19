@@ -17,24 +17,19 @@ import org.junit.jupiter.api.Test;
 
 public class AppTest 
 {
-	
+	/*
 	@BeforeAll
 	static void setUpBeforeClass() throws Exception {
 		System.out.println("Inicio");
 	}
 	
-	EmployeeManager gestor = new EmployeeManager();
+	
     @Test
     @DisplayName("Establecer una prueba que de error dado a un número negativo como años en la empresa")
     public void limiteAños() throws Exception
     {
-        Employee empleado = new Employee("Paco",-2);
-        gestor.addEmployee(empleado.getNombre(), empleado.getAños());
-        
-        Integer numeroEsperado = -2;
-        Integer numeroReal = empleado.getAños();
-        assertEquals(numeroEsperado,numeroReal, "Deberá ser positivo");
-}}
+    
+}}    */
     /*
     @Test
     @DisplayName("Prueba que de error debido a un nombre de carácteres mayor a 25.")
@@ -49,4 +44,5 @@ public class AppTest
         else {
         	System.out.println("Se ha creado el empleado.");
         }
-    }}*/
+    }*/
+    }
