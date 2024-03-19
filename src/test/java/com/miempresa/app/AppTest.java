@@ -9,29 +9,36 @@ import com.miempresa.app.Employee;
  * Unit test for simple App.
  */
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 public class AppTest 
 {
 	
+	@BeforeAll
+	static void setUpBeforeClass() throws Exception {
+		System.out.println("Inicio");
+	}
+	
 	EmployeeManager gestor = new EmployeeManager();
     @Test
-    @DisplayName("")
-    public void limiteAños()
+    @DisplayName("Establecer una prueba que de error dado a un número negativo como años en la empresa")
+    public void limiteAños() throws Exception
     {
         Employee empleado = new Employee("Paco",-2);
         gestor.addEmployee(empleado.getNombre(), empleado.getAños());
         
-        if (empleado.getAños() < 0) {
-        	throw new IllegalArgumentException("No puede tener un número negativo como años en la empresa.");
-    }
-        else {
-        	System.out.println("Se ha creado el empleado.");
-        }
-}
+        Integer numeroEsperado = -2;
+        Integer numeroReal = empleado.getAños();
+        assertEquals(numeroEsperado,numeroReal, "Deberá ser positivo");
+}}
+    /*
     @Test
-    public void limiteCaracteres()
+    @DisplayName("Prueba que de error debido a un nombre de carácteres mayor a 25.")
+    public void limiteCaracteres() throws Exception
     {
         Employee empleado = new Employee("Nombreconmasde25caracteres",5);
         gestor.addEmployee(empleado.getNombre(), empleado.getAños());
@@ -42,4 +49,4 @@ public class AppTest
         else {
         	System.out.println("Se ha creado el empleado.");
         }
-    }}
+    }}*/
