@@ -4,7 +4,7 @@ import com.github.javafaker.Faker;
 
 public class Main {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 	
 		Faker faker = new Faker();
 		EmployeeManager manager = new EmployeeManager();
