@@ -1,24 +1,21 @@
 package com.miempresa.app;
+import com.miempresa.app.Employee;
 
+import java.util.ArrayList;
+import java.util.List;
 public class EmployeeManager {
+ArrayList<Employee> lista = new ArrayList<Employee>();
 String[] employeeNames = new String[10];
 int[] employeeYears = new int[10];
 int numberOfEmployees = 0;
 public void addEmployee(String name, int years) {
-if (numberOfEmployees < 10) {
-employeeNames[numberOfEmployees] = name;
-employeeYears[numberOfEmployees] = years;
-numberOfEmployees++;
-System.out.println(name + " added to the system.");
-} else {
-System.out.println("Cannot add more employees, system is full.");
-}
+Employee nuevo = new Employee(name,years);
+lista.add(nuevo);
 }
 public void printEmployees() {
 System.out.println("List of employees:");
-for (int i = 0; i < numberOfEmployees; i++) {
-System.out.println(employeeNames[i] + ", Years in company: " +
-employeeYears[i]);
+for (Employee empleado: lista) {
+	System.out.println(empleado.toString());
 }
 }
 public static void main(String[] args) {

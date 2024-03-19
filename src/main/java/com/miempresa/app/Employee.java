@@ -8,5 +8,18 @@ public class Employee {
 		this.años=años;
 		this.nombre=nombre;
 	}
+
+	public int getAños() {
+		return años;
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	@Override
+	public String toString() {
+		return "Employee [años=" + años + ", nombre=" + nombre + "]";
+	}
 	
 }
